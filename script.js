@@ -78,7 +78,7 @@ form.addEventListener('submit', async (e) => {
   submitBtn.textContent = 'Sending...';
   try {
     await fetch(ZOHO_ENDPOINT, { method: 'POST', mode: 'no-cors', body });
-    showDone();
+    window.location.href = 'thank-you.html';
   } catch (err) {
     formError.hidden = false;
     submitBtn.disabled = false;
