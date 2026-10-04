@@ -321,6 +321,49 @@ a { text-decoration: none; color: inherit; }
   margin: 0 auto 16px;
 }
 
+/* How it works */
+.how-section { padding: 48px 0 24px; }
+
+.how-title { text-align: center; font-size: 26px; margin-bottom: 28px; }
+
+.how-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.how-step {
+  padding: 24px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  text-align: center;
+}
+
+.how-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0078d4, #5059c9);
+  color: #fff;
+  font-weight: 800;
+  font-size: 15px;
+  margin-bottom: 14px;
+}
+
+.how-step h3 { font-size: 16px; margin-bottom: 8px; }
+
+.how-step p { font-size: 14px; margin: 0; }
+
+@media (max-width: 760px) {
+  .how-grid { grid-template-columns: 1fr; }
+}
+
 /* Disclaimer + footer */
 .disclaimer { padding: 32px 0; }
 
