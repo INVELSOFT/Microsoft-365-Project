@@ -295,6 +295,12 @@ a { text-decoration: none; color: inherit; }
 
 .step-dot.active { background: var(--blue); }
 
+.hp-field { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+
+.form-error { color: #b42318; font-size: 13px; font-weight: 600; margin: 0 0 12px; }
+
+.btn:disabled { opacity: 0.7; cursor: not-allowed; }
+
 .issue-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
