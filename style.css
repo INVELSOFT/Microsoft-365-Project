@@ -205,3 +205,85 @@ a { text-decoration: none; color: inherit; }
 @media (max-width: 520px) {
   .form-card { padding: 24px 20px; }
 }
+.steps { display: flex; gap: 6px; margin-bottom: 20px; }
+
+.step-dot {
+  flex: 1;
+  height: 4px;
+  border-radius: 999px;
+  background: var(--border);
+}
+
+.step-dot.active { background: var(--blue); }
+
+.issue-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.issue-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 16px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.issue-btn:hover {
+  border-color: var(--blue);
+  box-shadow: 0 6px 16px rgba(0, 120, 212, 0.12);
+  transform: translateY(-1px);
+}
+
+.issue-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 9px;
+  background: #e8f1fb;
+  color: var(--blue-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.back-link {
+  background: none;
+  border: none;
+  padding: 0;
+  margin-bottom: 12px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink-light);
+  cursor: pointer;
+}
+
+.back-link:hover { color: var(--blue); }
+
+.issue-chip {
+  display: inline-block;
+  background: #e8f1fb;
+  color: var(--blue-dark);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 999px;
+  margin-bottom: 14px;
+}
+
+@media (max-width: 420px) {
+  .issue-grid { grid-template-columns: 1fr; }
+  .issue-btn { flex-direction: row; align-items: center; }
+}

@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Microsoft Office Problems? Get Expert Help | INVELSOFT</title>
-<meta name="description" content="Activation errors, Outlook not syncing, Word or Excel crashing? Tell us what's wrong and a specialist will contact you.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -25,7 +24,7 @@
       <div class="hero-content">
         <span class="eyebrow">Microsoft Office support</span>
         <h1>Facing Microsoft Office problems? Get expert help today.</h1>
-        <p class="hero-subtext">Activation errors, Outlook not syncing, Word or Excel crashing — tell us what's wrong and a specialist will contact you.</p>
+        <p class="hero-subtext">Pick your issue and a specialist will contact you. It takes less than a minute.</p>
         <ul class="hero-points">
           <li>Free callback, no obligation</li>
           <li>Response within 24 hours</li>
@@ -34,8 +33,39 @@
       </div>
 
       <div class="form-card" id="lead-form">
-        <form id="leadForm" novalidate>
-          <h2>Tell us about your issue</h2>
+        <div class="steps" id="steps" aria-hidden="true">
+          <span class="step-dot active"></span>
+          <span class="step-dot"></span>
+        </div>
+
+        <div id="step1">
+          <h2>What do you need help with?</h2>
+          <div class="issue-grid">
+            <button type="button" class="issue-btn" data-issue="Office activation or license">
+              <span class="issue-icon">&#128273;</span><span>Activation or license</span>
+            </button>
+            <button type="button" class="issue-btn" data-issue="Install or update error">
+              <span class="issue-icon">&#11015;</span><span>Install or update error</span>
+            </button>
+            <button type="button" class="issue-btn" data-issue="Outlook email problems">
+              <span class="issue-icon">&#9993;</span><span>Outlook email problems</span>
+            </button>
+            <button type="button" class="issue-btn" data-issue="Word / Excel / PowerPoint crashing">
+              <span class="issue-icon">&#9888;</span><span>Word, Excel or PowerPoint crashing</span>
+            </button>
+            <button type="button" class="issue-btn" data-issue="Teams issue">
+              <span class="issue-icon">&#128172;</span><span>Teams issue</span>
+            </button>
+            <button type="button" class="issue-btn" data-issue="Other">
+              <span class="issue-icon">&#10067;</span><span>Something else</span>
+            </button>
+          </div>
+        </div>
+
+        <form id="leadForm" novalidate hidden>
+          <button type="button" class="back-link" id="backBtn">&larr; Change issue</button>
+          <div class="issue-chip" id="issueChip"></div>
+          <h2>Where should we contact you?</h2>
           <div class="form-row">
             <label for="name">Full name</label>
             <input type="text" id="name" name="name" autocomplete="name" required>
@@ -49,15 +79,13 @@
             <input type="email" id="email" name="email" autocomplete="email" required>
           </div>
           <div class="form-row">
-            <label for="issue">What do you need help with?</label>
-            <select id="issue" name="issue" required>
-              <option value="" selected disabled>Select your issue</option>
-              <option>Office activation or license</option>
-              <option>Install or update error</option>
-              <option>Outlook email problems</option>
-              <option>Word / Excel / PowerPoint crashing</option>
-              <option>Teams issue</option>
-              <option>Other</option>
+            <label for="device">Your device</label>
+            <select id="device" name="device" required>
+              <option value="" selected disabled>Select device</option>
+              <option>Windows</option>
+              <option>Mac</option>
+              <option>Android</option>
+              <option>iPhone / iPad</option>
             </select>
           </div>
           <button type="submit" class="btn btn-primary btn-full">Get Help Now</button>
