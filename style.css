@@ -181,6 +181,8 @@ a { text-decoration: none; color: inherit; }
   .contact-grid { grid-template-columns: 1fr; }
 }
 
+.text-link { color: var(--blue); font-weight: 600; text-decoration: underline; }
+
 .page-card ul { color: var(--ink-light); padding-left: 20px; line-height: 1.8; }
 
 .btn-header {
