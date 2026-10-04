@@ -245,33 +245,37 @@ a { text-decoration: none; color: inherit; }
 .hero-card-3 { margin-right: 20px; }
 
 .hero-card-dot {
-  width: 40px;
-  height: 40px;
-  min-width: 40px;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
   border-radius: 10px;
   background: linear-gradient(135deg, var(--blue), #4fa3e3);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 20px;
 }
 
 .hero-card-1 .hero-card-dot { background: linear-gradient(135deg, #2b579a, #5b8fd6); }
 .hero-card-2 .hero-card-dot { background: linear-gradient(135deg, #217346, #4caf7d); }
 .hero-card-3 .hero-card-dot { background: linear-gradient(135deg, #d24726, #f08b63); }
+.hero-card-4 .hero-card-dot { background: linear-gradient(135deg, #5059c9, #8b8cc7); }
+
+.hero-card-4 { margin-left: 40px; }
 
 .hero-card-content {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 2px;
   min-width: 0;
 }
 
-.hero-card-line {
-  width: 100%;
-  height: 10px;
-  border-radius: 999px;
-  background: var(--bg-soft);
-}
+.hero-card-content strong { font-size: 16px; color: var(--ink); }
 
-.hero-card-line.short { width: 55%; }
+.hero-card-content span { font-size: 13px; color: var(--ink-light); }
 
 @media (max-width: 900px) {
   .hero-inner { grid-template-columns: 1fr; }
