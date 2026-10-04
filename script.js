@@ -1,25 +1,14 @@
-const navToggle = document.getElementById('navToggle');
-const navLinksMobile = document.getElementById('navLinksMobile');
+document.getElementById('year').textContent = new Date().getFullYear();
 
-navToggle.addEventListener('click', () => {
-  const isOpen = navLinksMobile.classList.toggle('open');
-  navToggle.classList.toggle('open', isOpen);
-  navToggle.setAttribute('aria-expanded', String(isOpen));
-});
+const form = document.getElementById('leadForm');
+const success = document.getElementById('formSuccess');
 
-navLinksMobile.querySelectorAll('a').forEach((link) => {
-  link.addEventListener('click', () => {
-    navLinksMobile.classList.remove('open');
-    navToggle.classList.remove('open');
-    navToggle.setAttribute('aria-expanded', 'false');
-  });
-});
-
-const navLinks = document.querySelectorAll('.nav-links a');
-
-navLinks.forEach((link) => {
-  link.addEventListener('click', () => {
-    navLinks.forEach((l) => l.classList.remove('active'));
-    link.classList.add('active');
-  });
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  if (!form.checkValidity()) {
+    form.reportValidity();
+    return;
+  }
+  form.hidden = true;
+  success.hidden = false;
 });
